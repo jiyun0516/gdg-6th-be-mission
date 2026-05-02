@@ -1,0 +1,49 @@
+### 상품 등록 - 에어팟
+POST http://localhost:8080/admin/product
+Content-Type: application/json
+
+{
+  "name": "에어팟",
+  "price": 249000,
+  "stock": 5
+}
+
+### 상품 등록 - 버즈
+POST http://localhost:8080/admin/product
+Content-Type: application/json
+
+{
+  "name": "버즈",
+  "price": 129000,
+  "stock": 8
+}
+
+### 상품 조회
+GET http://localhost:8080/products/에어팟
+
+### 재고 추가
+PATCH http://localhost:8080/admin/product/1/stock?quantity=3
+
+### 상품 구매
+POST http://localhost:8080/buy
+Content-Type: application/json
+
+[
+  {
+    "id": 1,
+    "quantity": 2
+  },
+  {
+    "id": 2,
+    "quantity": 1
+  }
+]
+
+### 여러 상품 삭제
+DELETE http://localhost:8080/admin/products
+Content-Type: application/json
+
+[1,2]
+
+### 삭제 후 조회 확인
+GET http://localhost:8080/products/에어팟
