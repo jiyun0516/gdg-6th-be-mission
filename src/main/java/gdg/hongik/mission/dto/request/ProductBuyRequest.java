@@ -1,4 +1,7 @@
 package gdg.hongik.mission.dto.request;
 
-public class ProductBuyRequest {
+public record ProductBuyRequest(
+        Long id,
+        int quantity
+) {
 }

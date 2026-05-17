@@ -1,4 +1,6 @@
 package gdg.hongik.mission.dto.request;
 
-public class StockUpdateRequest {
+public record StockUpdateRequest (
+        int quantity
+) {
 }

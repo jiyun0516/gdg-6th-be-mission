@@ -1,4 +1,8 @@
 package gdg.hongik.mission.dto.request;
 
-public class ProductCreateRequest {
+public record ProductCreateRequest(
+        String name,
+        int price,
+        int stock
+) {
 }
